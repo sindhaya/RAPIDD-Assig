@@ -1,0 +1,19 @@
+<table style="width: 100%;height: 10vh;color: coral;">
+    <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Total Time Worked</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let employee of users"
+        [ngClass]="{ 'less-than-100': isLessThan100Hours(employee.totalTime) }"
+      >
+        <td>{{ employee.EmployeeName }}</td>
+        <td>{{ employee.totalTime }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+ 
